@@ -12,7 +12,8 @@ interface PostQuery {
   pageSize: number,
 }
 
-const usePosts = (query: PostQuery)=> 
+const usePosts = (query: PostQuery) => 
+
   useInfiniteQuery<Post[], Error>({
         queryKey: ["posts", query],
         queryFn: ({pageParam = 1})=> axios
